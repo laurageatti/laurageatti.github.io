@@ -1,0 +1,112 @@
+%\magnification=1200 
+\magnification\magstephalf
+\newcount\newpen\newpen=50
+\font\bigtitlefont=cmbx12 at 15pt
+\def\R{{\bf R}}
+\def\C{{\bf C}}
+\def\Z{{\bf Z}}
+\def\N{{\bf N}}
+\def\Log{{\rm Log}}
+\def\Sol{{\it Sol}}
+%Fonts and sizes
+
+\font\ninerm=cmr9  \font\eightrm=cmr8  \font\sixrm=cmr6
+\font\ninei=cmmi9  \font\eighti=cmmi8  \font\sixi=cmmi6
+\font\ninesy=cmsy9 \font\eightsy=cmsy8 \font\sixsy=cmsy6
+\font\ninebf=cmbx9 \font\eightbf=cmbx8 \font\sixbf=cmbx6
+\font\nineit=cmti9 \font\eightit=cmti8 
+\font\ninett=cmtt9 \font\eighttt=cmtt8 
+\font\ninesl=cmsl9 \font\eightsl=cmsl8
+
+
+\font\tengoth=eufm10  \font\ninegoth=eufm9
+\font\eightgoth=eufm8 \font\sevengoth=eufm7 
+\font\sixgoth=eufm6   \font\fivegoth=eufm5
+\newfam\gothfam \def\goth{\fam\gothfam\tengoth} 
+\textfont\gothfam=\tengoth
+\scriptfont\gothfam=\sevengoth 
+\scriptscriptfont\gothfam=\fivegoth
+
+\newskip\ttglue
+
+% switch to 8-point type
+\def\eightpoint{\def\rm{\fam0\eightrm}
+  \textfont0=\eightrm \scriptfont0=\sixrm
+  \scriptscriptfont0\fiverm
+  \textfont1=\eighti \scriptfont1=\sixi
+  \scriptscriptfont1\fivei 
+  \textfont2=\eightsy \scriptfont2=\sixsy
+  \scriptscriptfont2\fivesy 
+  \textfont3=\tenex \scriptfont3=\tenex
+  \scriptscriptfont3\tenex 
+  \textfont\itfam=\eightit\def\it{\fam\itfam\eightit}%
+  \textfont\slfam=\eightsl\def\sl{\fam\slfam\eightsl}%
+  \textfont\ttfam=\eighttt\def\tt{\fam\ttfam\eighttt}%
+  \textfont\gothfam=\eightgoth\scriptfont\gothfam=\sixgoth 
+  \scriptscriptfont\gothfam=\fivegoth
+  \def\goth{\fam\gothfam\tengoth}
+  \textfont\bffam=\eightbf\scriptfont\bffam=\sixbf
+  \scriptscriptfont\bffam=\fivebf
+  \def\bf{\fam\bffam\eightbf}%
+  \tt\ttglue=.5em plus.25em minus.15em
+  \normalbaselineskip=9pt \setbox\strutbox\hbox{\vrule
+  height7pt depth2pt width0pt}%
+  \let\big=\eightbig\normalbaselines\rm}
+
+\def\pn{\par\noindent}
+\def\sn{\smallskip\noindent}
+\def\mn{\medskip\noindent}
+\def\bn{\bigskip\noindent}
+
+
+\bigskip\bigskip\bigskip\bigskip
+\noindent
+IMM 2025-26 \quad Complex Analysis \quad Exercises 5.   \hfill  
+\smallskip
+\hrule
+\bn
+\item{1.}  Evaluate $\Gamma(-{1\over 2}),\quad \Gamma(-{7\over  2}),\quad \Gamma(-{1\over 3})$. 
+
+ 
+\bn
+\item{2.}   Let $n\in\N$. Show that 
+$$ \Gamma\left({1\over 2}+n\right)\,=\, {{1\cdot 3\cdot 5\cdot \ldots \cdot (2n-1)}\over {2^n}}\sqrt\pi\, 
+%=\, 2^{1-2n}{{\Gamma(2n)}\over {\Gamma(n)}}\sqrt\pi
+.$$ 
+ 
+\bn
+\item{3.}   Use  Wielandt's theorem to prove that for $Re(z)>0$ 
+$$\Gamma(z)={1\over {g(z)}},\quad  
+ \hbox{where}\quad g(z)=ze^{Cz}\prod_{k=1}^\infty\left((1+{z\over k})e^{-z/k}\right),$$
+where $C=\lim_k(1+{1\over 2}+{1\over 3}+\ldots-\log k)$ is the Euler-Mascheroni constant. \par
+ ({\it The definition of $\Gamma$ as the  reciprocal of the above function $g$ is in Cartan's book, p.159-161}).
+
+
+
+\bn
+\item{4.} Use  Wielandt's theorem to prove the Legendre duplication formula 
+$$\Gamma(2z)={1\over {\sqrt\pi}} 2^{2z-1}\Gamma(z)\Gamma(z+{1\over 2}).$$
+ (hint: let $w=2z$ and consider  the function $f(w)=2^w\Gamma({w\over 2})\Gamma({w\over 2}+{1\over 2})$). 
+
+ 
+\bn
+\item{5.} Prove that if $y>0$, then 
+$$|\Gamma(iy)|=\sqrt{{\pi\over{y\sinh \pi y}}}.$$ 
+
+\bn\bn\bn
+\item{6.}  Recall that  $\zeta(s)=\prod_{p}{1\over{1-{1\over p^s}}},$ for $s\in\C$ with $Re(s)>1$. Compute the logarithmic derivative of $\zeta$ (justify the steps). 
+
+\bn
+\item{7.}   Let $2,\,3,\,5,\,7,\,\ldots$ be the series of prime numbers. Prove that 
+$$(1-{1\over 2^2})(1-{1\over 3^2})(1-{1\over 5^2})(1-{1\over 7^2})\ldots={6\over{\pi^2}}.$$ 
+ 
+\bn
+\item{8.}  Verify that $\zeta(1-s)=2^{1-s}\pi^{-s}\Gamma(s) \cos({\pi s\over  2})\zeta(s)$. 
+
+\bn
+\item{9.}  Using the analytic continuation given by the   formula of the previous exercise, prove that $\zeta(-1)=-{1\over 12}$  and that $\zeta(-3)= {1\over 120}$. 
+
+\bn
+\item{10.}  Compute $\zeta(m)$, where $m$ is a negative  integer. 
+\bye
+

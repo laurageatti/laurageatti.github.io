@@ -1,0 +1,186 @@
+%\magnification=1200 
+\magnification\magstephalf
+\newcount\newpen\newpen=50
+\font\bigtitlefont=cmbx12 at 15pt
+\def\R{{\bf R}}
+\def\C{{\bf C}}
+\def\Z{{\bf Z}}
+\def\Log{{\rm Log}}
+%Fonts and sizes
+
+\font\ninerm=cmr9  \font\eightrm=cmr8  \font\sixrm=cmr6
+\font\ninei=cmmi9  \font\eighti=cmmi8  \font\sixi=cmmi6
+\font\ninesy=cmsy9 \font\eightsy=cmsy8 \font\sixsy=cmsy6
+\font\ninebf=cmbx9 \font\eightbf=cmbx8 \font\sixbf=cmbx6
+\font\nineit=cmti9 \font\eightit=cmti8 
+\font\ninett=cmtt9 \font\eighttt=cmtt8 
+\font\ninesl=cmsl9 \font\eightsl=cmsl8
+
+
+\font\tengoth=eufm10  \font\ninegoth=eufm9
+\font\eightgoth=eufm8 \font\sevengoth=eufm7 
+\font\sixgoth=eufm6   \font\fivegoth=eufm5
+\newfam\gothfam \def\goth{\fam\gothfam\tengoth} 
+\textfont\gothfam=\tengoth
+\scriptfont\gothfam=\sevengoth 
+\scriptscriptfont\gothfam=\fivegoth
+
+\newskip\ttglue
+
+% switch to 8-point type
+\def\eightpoint{\def\rm{\fam0\eightrm}
+  \textfont0=\eightrm \scriptfont0=\sixrm
+  \scriptscriptfont0\fiverm
+  \textfont1=\eighti \scriptfont1=\sixi
+  \scriptscriptfont1\fivei 
+  \textfont2=\eightsy \scriptfont2=\sixsy
+  \scriptscriptfont2\fivesy 
+  \textfont3=\tenex \scriptfont3=\tenex
+  \scriptscriptfont3\tenex 
+  \textfont\itfam=\eightit\def\it{\fam\itfam\eightit}%
+  \textfont\slfam=\eightsl\def\sl{\fam\slfam\eightsl}%
+  \textfont\ttfam=\eighttt\def\tt{\fam\ttfam\eighttt}%
+  \textfont\gothfam=\eightgoth\scriptfont\gothfam=\sixgoth 
+  \scriptscriptfont\gothfam=\fivegoth
+  \def\goth{\fam\gothfam\tengoth}
+  \textfont\bffam=\eightbf\scriptfont\bffam=\sixbf
+  \scriptscriptfont\bffam=\fivebf
+  \def\bf{\fam\bffam\eightbf}%
+  \tt\ttglue=.5em plus.25em minus.15em
+  \normalbaselineskip=9pt \setbox\strutbox\hbox{\vrule
+  height7pt depth2pt width0pt}%
+  \let\big=\eightbig\normalbaselines\rm}
+
+\def\pn{\par\noindent}
+\def\sn{\smallskip\noindent}
+\def\mn{\medskip\noindent}
+\def\bn{\bigskip\noindent}
+
+
+\bigskip\bigskip\bigskip\bigskip
+\noindent
+IMM 2025-26 \quad Complex Analysis \quad Exercises 0.   \hfill  \smallskip
+\hrule
+
+
+\bn
+{\bf Cauchy-Riemann equations.}
+\bn
+\item{1.} Determine all points where the following functions satisfy the Cauchy-Riemann equations: 
+$$f(x,y)=xy^2,\quad f(z)=|z|^2(|z|^2-1),\quad f(z)=\sin (|z|^2),\quad f(z)=z(z+\bar z)^2.$$
+
+\bn
+\item{2.} Verify that $f(z)=\bar z$ is not $\C$-differentiable.
+
+\bn
+\item{3.} Let  $f\colon D\to\C $ be a function on an open set  $D\subset \C$. 
+Verify that
+   ${{\partial f}\over {\partial \bar z}}=\overline{{{\partial \bar f}\over {\partial z}}}. $
+
+\bn
+\item{4.} Let  $f\colon D\to\C $ be a holomorphic function on an open set  $D\subset \C$.  Verify that the function 
+$g(z):=\overline{f(\bar z)}$ is holomorphic on  $D^*=\{\bar z~: z\in D\}$.
+
+\bn
+\item{5.} Let  $f\colon D\to\C $ be a holomorphic function on an open connected set  $D\subset \C$:
+\itemitem{(a)} if $f'(z)\equiv 0$, then  $f$ is constant.
+\itemitem{(b)} if $|f(z)|^2 $ is constant, then  $f$ is constant.
+\itemitem{(c)} if ${\rm arg}(f(z))$ is constant, then  $f$ is constant.
+
+
+
+
+\bn\bn
+{\bf Elementary functions; complex power series.}
+\bn
+
+\item{6.} Compute the values of the following functions:   
+\sn
+\itemitem{(a)} $e^{i\pi/4},\quad e^{i3\pi/4},\quad e^{1+i2\pi/3}$.
+
+\sn
+\itemitem{(b)} $2^i,\quad i^i$.  
+\sn
+\itemitem{(c)} 
+$\log 3i,\quad \log(-4),\quad \log (e+ i)$, \quad $\Log(\Log(i))$\par
+ (here  $\log$ denotes the  multivalued complex logarithm and $\Log$ denotes its  principal value).
+
+
+\bn\item{7.} Consider the function  $f(z)=z^2,~z\in\C$. 
+\itemitem{(a)}  Determine the image of the set $Q=\{z=x+iy\in \C~|~x,y>0\}$  under $f$. 
+\itemitem{(b)}  Determine the largest disc   $B(1,R)=\{z\in\C~|~|z-1|<R\} $ on which $f$ is injective.
+\itemitem{(c)}  Answer questions (a) and (b) when $f(z)=z^4$.
+ 
+\bn
+\item{8.}  Determine the preimage of $Q=\{z=x+iy\in \C~|~x,y>0\}$ under  $f(z)=\sqrt z$. 
+
+ \bn
+\item{9.} Determine the image of the following sets of the plane under the exponential map $z\mapsto e^z$:
+\itemitem{(a)}  the line $x=2$ ;
+\itemitem{(b)}  the line  $y=x$;
+\itemitem{(c)} the square of vertices $0,~i, ~1,~1+i$.
+\itemitem{(d)} the strip $x-{\pi\over 2}<y<x+{\pi\over 2}$.
+\bigskip
+\item{10.} Let $f(z)=e^{z^2}$. Draw the curves $|f|$=constant and  ${\rm arg}(f)$=constant. 
+
+
+
+\bigskip
+\item{11.} Let  $~\cos z:={{e^{iz}+e^{-iz}}\over 2}~$ and  $~\sin z:={{e^{iz}-e^{-iz}}\over {2i}}$.
+ \sn
+\itemitem{(a)} Verify that $(\sin z)'=\cos z$ e $(\cos z)'=-\sin z$.
+\itemitem{(b)} Verify that  $\cos^2 z+\sin^2 z =1$.
+
+
+
+\bn\bn
+{\bf Complex integration.}
+\bn
+ 
+\item{12.} Compute  
+$$\int_\gamma {e^z\over {z}} dz,\qquad \int_\gamma {e^z\over {(z-1/2)}^2} dz,$$
+where $\gamma= \{ e^{ i\theta},~\theta\in [0,2\pi]\}.$ 
+
+\bigskip
+\item{13.} Compute 
+$${1\over {2\pi i}} \int_\gamma {1\over {(z-1)(z-2i)}} dz,$$
+where $\gamma= \{ 4e^{ i\theta},~\theta\in [0,2\pi]\}.$ 
+
+\bigskip
+\item{14.} Compute 
+$$\int_\gamma {\cos z\over {(z-\pi/2)^{10}}} dz,$$
+where $\gamma= \{ 2e^{ i\theta},~\theta\in [0,2\pi]\}.$ 
+
+\bigskip
+\item{15.} Let $|a|<1<|b|$. For $n,m\in \Z$, compute  
+$${1\over {2\pi i}}\int_\gamma {(z -b)^m\over ({z-a})^n }dz,$$
+where $\gamma= \{ e^{ i\theta},~\theta\in [0,2\pi]\}.$ 
+
+
+
+\bn\bn
+{\bf Identity principle, Liouville theorem.}
+\bn
+
+
+\item{16.} Let $\Omega\subset \C$ be an open connected set. Let $f,g\colon \Omega\longrightarrow \C$ be holomorphic functions such that  
+$f\cdot g\equiv 0$. Then either  $f\equiv 0$ or $g\equiv 0$.
+
+\bigskip
+\item{17.} Let $f \colon \C\longrightarrow \C$ be a holomorphic function, such that $|f(z)|\le |e^z|$, for all $z\in \C$.
+Prove that $f(z)=ce^z$, for some constant $c\in\C$.
+
+
+\bigskip
+\item{18.} Let $f \colon \C\longrightarrow \C$ be a holomorphic function. Assume that there exist positive constants   $M$ and  $c$ for which  $|f(z)|\le M (c+|z|^n)$, for all $z\in\C\setminus B(0,R)$, with  $R>0$.  
+\itemitem{(a)} Show that  $f$ is a polynomial of degree  $\le n$.  
+\itemitem{(b)} Assume  $|f(z)|\le M|z|^2$. Determine   $f(0)$ and  $f'(0)$. 
+
+
+\bigskip
+\item{19.} Determine all the zeros of  $\sin z$ and $\cos z$. Let $U=\C\setminus \{\pi/2\pm k\pi,~k\in
+\Z\}$. Let  $f$ be a holomorphic function on $U$, such that  $f(\pi/n)=\tan(\pi/n),~n\ge 3$. Deduce that   $f$ is not holomorphic on all $\C$ and that it does not assume the value  $i$.
+
+
+
+\bye
